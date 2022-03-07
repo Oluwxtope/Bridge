@@ -326,6 +326,24 @@ def followed_suit(hand, card, suit_lead):
     
 ## PROVIDED FUNCTIONS
 
+def convert_value(val):
+  '''
+  Returns the value of a card with Aces as being high (14)
+  and everything else their usual numeric positional value
+  
+  convert_value: Str -> Nat
+  Requires: 
+     val is in ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+                "J", "Q", "K"]
+  '''
+  if val in HIGH_CARDS:
+    if val == HIGH_CARDS[-1]:
+      return 14 ##Aces are high
+    jack_val = 11
+    return jack_val + HIGH_CARDS.index(val)
+  else:
+    return int(val)
+
 def load_game():
   '''
   Returns the loaded Game if a user wants to restore a game.
