@@ -1,5 +1,5 @@
 from bidding import *
-import check
+# import check
 
 
 PLAYERS = ["North", "East", "South", "West"]
@@ -586,10 +586,8 @@ P = [Player("North", [Card("2", "D")]),
      Player("South", [Card("A", "D")]), 
      Player("West", [Card("K", "D")])]  
 G = Game([Bid("3", "S"), None], "East", "North", 0, P, False, False)
-check.expect("Example 1", G.trick_winner([Card("5", "D"), Card("A", "D"), 
-                Card("K", "D"), Card("2", "D")]), "South")
-check.expect("Example 1 mutation", G, 
-             Game([Bid("3", "S"), None], "South", "North", 1, P, False, False))
+# check.expect("Example 1", G.trick_winner([Card("5", "D"), Card("A", "D"), Card("K", "D"), Card("2", "D")]), "South")
+# check.expect("Example 1 mutation", G, Game([Bid("3", "S"), None], "South", "North", 1, P, False, False))
              
                 
 P = [Player("North", [Card("2", "S")]), 
@@ -597,10 +595,8 @@ P = [Player("North", [Card("2", "S")]),
      Player("South", [Card("A", "D")]), 
      Player("West", [Card("K", "D")])]  
 G = Game([Bid("3", "S"), None], "East", "North", 0, P, False, False)   
-check.expect("Example 1",G.trick_winner([Card("5", "D"), Card("A", "D"), 
-                Card("K", "D"), Card("2", "S")]), "North")
-check.expect("Example 1 mutation", G, 
-             Game([Bid("3", "S"), None], "North", "North", 1, P, False, False))
+# check.expect("Example 1",G.trick_winner([Card("5", "D"), Card("A", "D"), Card("K", "D"), Card("2", "S")]), "North")
+# check.expect("Example 1 mutation", G, Game([Bid("3", "S"), None], "North", "North", 1, P, False, False))
              
              
 ##Example Save
@@ -640,9 +636,8 @@ G = Game([Bid("3", "NT"), Bid("double", None)], "West",
          "South", 12, P, False, False)
 
 # Uncomment to test!
-check.set_file_exact("testExample.txt", 
-                    "testExampleExpected.txt")
-check.expect("Testing Given Example", G.save("testExample.txt"), None)
+# check.set_file_exact("testExample.txt", "testExampleExpected.txt")
+# check.expect("Testing Given Example", G.save("testExample.txt"), None)
 
 
 ##Example load
@@ -656,18 +651,18 @@ P = [Player("North", [Card("2", "S")]),
 G = Game([Bid("3", "NT"), Bid("double", None)], "West", 
          "South", 12, P, False, False)
 
-check.expect("Testing Given Example Load", load("testExampleExpected.txt"), G)
+# check.expect("Testing Given Example Load", load("testExampleExpected.txt"), G)
 
 ##Examples followed_suit
 
 hand = [Card("A", "D"), Card("4", "C")]
 card = hand[1]
-check.expect("Basic Example", followed_suit(hand, card, "C"), True)
+# check.expect("Basic Example", followed_suit(hand, card, "C"), True)
 
 hand = [Card("A", "D"), Card("4", "C")]
 card = hand[0]
-check.expect("Basic Example", followed_suit(hand, card, "C"), False)
+# check.expect("Basic Example", followed_suit(hand, card, "C"), False)
 
 hand = [Card("A", "D"), Card("4", "C")]
 card = hand[0]
-check.expect("Basic Example", followed_suit(hand, card, None), True)
+# check.expect("Basic Example", followed_suit(hand, card, None), True)

@@ -1,5 +1,5 @@
 from numpy import random
-import check
+# import check
   
   
 class Card:
@@ -307,7 +307,7 @@ def deal_bootstrap(deck = []):
   return player_list
   
 
-
+'''
 ##Test for Card:
 
 c = Card("A", "C")
@@ -396,3 +396,4 @@ check.expect("Test deal Simple Mutation", P,
 L = [Card("A", "C"), Card("10", "C"), Card("4", "S"), Card("5", "H"), Card("K", "D")]
 check.set_print_exact("♠ 4", "♥ 5", "♦ K","♣ A 10")
 check.expect("Test example", display_hand(L), None)
+'''

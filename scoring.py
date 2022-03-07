@@ -1,5 +1,5 @@
 from playing import *
-import check
+# import check
 
 
 def score(bridge_game):
@@ -159,22 +159,19 @@ def score(bridge_game):
         else:
           return points - 200 - (400 * 2) - (600 * (undertricks - 3))
 
+'''
 ##Examples for score
 
-# P = [Player("North", []), Player("East", []),  Player("South", []),
-#     Player("West", [])]  
-# G = Game([Bid("3", "NT"), None], "South", 
-#     "North", 9, P, False, False)
-# check.expect("Example 1", score(G), 400)
+P = [Player("North", []), Player("East", []),  Player("South", []), Player("West", [])]  
+G = Game([Bid("3", "NT"), None], "South", "North", 9, P, False, False)
+check.expect("Example 1", score(G), 400)
 
-# G = Game([Bid("4", "S"), None], "South", 
-#     "North", 11, P, False, True)
-# check.expect("Example 2", score(G), 450)
+G = Game([Bid("4", "S"), None], "South", "North", 11, P, False, True)
+check.expect("Example 2", score(G), 450)
 
-# G = Game([Bid("4", "S"), Bid("double", None)], "South", 
-#     "North", 9, P, True, False)
-# check.expect("Example 3", score(G), -200)
-
+G = Game([Bid("4", "S"), Bid("double", None)], "South", "North", 9, P, True, False)
+check.expect("Example 3", score(G), -200)
+'''
 
 ##To see the whole game in action, uncomment this to play!
 print(score(play_game_bootstrap()))

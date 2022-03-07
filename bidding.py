@@ -1,5 +1,5 @@
 from dealing import *
-import check
+# import check
 
 
 class Bid:
@@ -327,6 +327,7 @@ def bidding_bootstrap(deck = []):
   return [players, bids]
     
 
+'''
 ## Examples for __eq__
 c = Bid("1", "C")
 d = Bid("1", "D")
@@ -429,3 +430,4 @@ check.expect("Example bid three pass",
 check.expect("Example incomplete", 
              bidding_complete([Bid("1", "C"), Bid("3", "NT"), 
                         Bid("pass", None), Bid("pass", None)]), False)
+'''
